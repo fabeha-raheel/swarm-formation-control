@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+
+        <!-- Add Gazebo Model Path -->
+        <env name="GAZEBO_MODEL_PATH" value="$(find uav_swarms)/models" />
+
+        <!-- overwriting these args -->
+        <arg name="debug" default="false" />
+        <arg name="gui" default="true" />
+        <arg name="pause" default="false" />
+        <arg name="headless" default="false" />
+        <arg name="world" default="$(find uav_swarms)/worlds/outdoor.world" />
+        <arg name="extra_gazebo_args" default="--verbose" />
+
+        <!-- include gazebo_ros launcher -->
+        <include file="$(find gazebo_ros)/launch/empty_world.launch">
+                <arg name="world_name" value="$(arg world)" />
+                <arg name="debug" value="$(arg debug)" />
+                <arg name="gui" value="$(arg gui)" />
+                <arg name="paused" value="$(arg pause)" />
+                <arg name="headless" value="$(arg headless)" />
+                <arg name="use_sim_time" value="true" />
+                <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)" />
+        </include>
+
+        <!-- Launch ArduCopter SITL -->
+        <node name="drone1_ArduCopter" pkg="uav_swarms" type="drone1_startsitl.sh" launch-prefix="gnome-terminal --tab --" />
+        <node name="drone2_ArduCopter" pkg="uav_swarms" type="drone2_startsitl.sh" launch-prefix="gnome-terminal --tab --" />
+        <node name="drone3_ArduCopter" pkg="uav_swarms" type="drone3_startsitl.sh" launch-prefix="gnome-terminal --tab --" />
+
+        <!-- Launch MAVROS -->
+        <include file="$(find uav_swarms)/launch/apm.launch" >
+                <!-- url for sitl -->
+                <arg name="fcu_url" value="udp://127.0.0.1:14551@14555" />
+                <arg name="mavros_ns" value="/drone1" /> 
+                <arg name="tgt_system" value="1" />  
+        </include>
+        <include file="$(find uav_swarms)/launch/apm.launch" >
+                <!-- url for sitl -->
+                <arg name="fcu_url" value="udp://127.0.0.1:14561@14565" />
+                <arg name="mavros_ns" value="/drone2" /> 
+                <arg name="tgt_system" value="2" />  
+        </include>
+        <include file="$(find uav_swarms)/launch/apm.launch" >
+                <!-- url for sitl -->
+                <arg name="fcu_url" value="udp://127.0.0.1:14571@14575" />
+                <arg name="mavros_ns" value="/drone3" /> 
+                <arg name="tgt_system" value="3" />  
+        </include>
+        
+
+</launch>

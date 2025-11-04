@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+
+        <!-- Launch MAVROS -->
+        <include file="$(find uav_swarms)/launch/apm.launch" >
+                <arg name="fcu_url" value="/dev/ttyACM0:57600" />
+                <arg name="mavros_ns" value="/drone2" /> 
+                <arg name="tgt_system" value="1" />  
+        </include>
+
+</launch>

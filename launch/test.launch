@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+
+        <!-- Uncomment a node to test inidividual formations -->
+
+        <!-- Swarm Takeoff and Land Node -->
+        <node name="Takeoff_and_Land" pkg="uav_swarms" type="swarm_takeoff_and_land.py" output="screen" />
+        
+        <!-- Swarm Line Formation Node -->
+        <!-- <node name="Line_Formation" pkg="uav_swarms" type="swarm_line_formation.py" output="screen" /> -->
+        
+        <!-- Swarm Flock Formation -->
+        <!-- <node name="Flock_Formation" pkg="uav_swarms" type="swarm_flock_formation.py" output="screen" /> -->
+
+</launch>
