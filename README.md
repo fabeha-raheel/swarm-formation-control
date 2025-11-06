@@ -7,7 +7,7 @@ The framework enables multiple UAVs to **fly cooperatively in structured formati
 
 Developed under the **Communication Systems and Networking Lab, NUST University**, this work was supported by a major industrial partner for advancing research in **multi-robot coordination and autonomous swarm intelligence**.
 
-<img src="images/uav_swarm.jpg" width="200">
+<img src="images/uav_swarms.jpg" width="200">
 ---
 
 ## 🎯 Project Highlights
