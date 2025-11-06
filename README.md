@@ -1,17 +1,20 @@
 # 🛸 Formation Control of UAV Swarms using ROS and ArduPilot SITL
 
-This project presents a **generalized framework for formation control of event-driven UAV swarms** built on **ROS Noetic** and **Gazebo** with **ArduPilot SITL**.  
-The framework enables multiple UAVs to **fly cooperatively in structured formations** that can dynamically **adapt to user commands or autonomous mission events**, making it suitable for both **simulation and real-world deployment** on multi-UAV systems.
+![Event-Driven UAV Swarms](images/uav_swarms.jpg)
 
-:bulb: ***The project has been successfully and thoroughly tested on hardware in various field trials. Robustness of the approach has been validated with a multi-UAV system of upto 5 drones.***
+This project presents a **generalized framework for formation control of event-driven UAV swarms** built on **ROS Noetic** and **Gazebo** with **ArduPilot SITL**. 
+
+The framework enables multiple UAVs to **fly cooperatively in structured formations** that can dynamically **adapt to user commands or autonomous mission events**.
 
 Developed under the **Communication Systems and Networking Lab, NUST University**, this work was supported by a major industrial partner for advancing research in **multi-robot coordination and autonomous swarm intelligence**.
 
-<img src="images/uav_swarms.jpg" width="600">
+:bulb: ***The project has been successfully and thoroughly tested on hardware in various field trials. Robustness of the approach has been validated with a multi-UAV system of upto 5 drones.***
 
 ---
 
 ## 🎯 Project Highlights
+
+![Swarm Network](images/network.JPG)
 
 - **Generalized ROS-based Swarm Framework:**  
   Modular design allowing scalable swarm formations with multiple UAVs.
@@ -23,20 +26,20 @@ Developed under the **Communication Systems and Networking Lab, NUST University*
 
 - **Multi-Formation Support:**  
   Implemented formations:
-  - 🧭 **Line formation**  
-  - 🪶 **Flock formation**  
-  - 🌀 **Helical (Vertical Spiral) formation**
+  - **Line formation**  
+  - **Flock formation**  
+  - **Helical (Vertical Spiral) formation**
 
 - **Fully Simulated in ROS + Gazebo + ArduPilot SITL & Validated on Actual Hardware**  
   Integrates **MAVROS**, **MAVProxy**, and **ArduCopter** for realistic flight dynamics. The framework has also been successfully tested in various field trials.
 
-  <img src="images/simulation.jpg" width="200">
-  <img src="images/hardware.jpg" width="200">
-
 - **Python-Based Implementation:**  
   Clean, modular Python scripts for leader–follower control, swarm API, and autonomous decision-making.
 
-  <img src="images/network.jpg" width="200">
+  ![Simulation Testing](images/simulation.JPG)
+
+  ![Simulation Testing](images/hardware.JPG)
+
 
 ---
 
@@ -68,17 +71,6 @@ fabeha-raheel-swarm-formation-control/
 │ └── swarm_takeoff_and_land.py
 └── worlds/ # Gazebo world files (outdoor, runway, etc.)
 ```
-
-
----
-
-## 🖼️ Simulation Snapshots
-
-| Leader-Follower UAVs in Gazebo | Mission Planner Visualization | Formation Change in Action |
-|--------------------------------|-------------------------------|-----------------------------|
-| ![](assets/gazebo_swarm.png) | ![](assets/mission_planner.png) | ![](assets/formation_switch.png) |
-
-*(Place your actual screenshots in `/assets` folder.)*
 
 ---
 
