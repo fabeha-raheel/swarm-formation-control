@@ -152,7 +152,16 @@ Detailed guides are available in the [`/docs/`](./docs) folder:
 
 If you use this project or parts of the framework in your research, please cite:
 
-> F. Raheel, _“Formation Control of UAV Swarms using ROS and ArduPilot SITL,”_ Communication Systems and Networking Lab, NUST University, 2023.
+```
+@misc{uav_swarms,
+  author = {Fabeha Raheel, Hassan Mehmood},
+  title = {Formation Control of UAV Swarms},
+  year = {2024},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/fabeha-raheel/swarm-formation-control}},
+}
+```
 
 ---
 
